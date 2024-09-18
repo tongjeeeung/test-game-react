@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(62, 55, 55);
+}
+
+.box {
+  display: flex;
+  background-color: black;
+  border: 4px solid black;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  width: 400px;
+  height: 300px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(62, 55, 55);
+  padding: 2%;
+}
+
+.card {
+  background-color: darkgray;
+  border-radius: 15%;
+}
+
+.notOpen {
+  background-color: gray;
+}
+
+.end {
+  color: rgb(255, 255, 255);
+}
