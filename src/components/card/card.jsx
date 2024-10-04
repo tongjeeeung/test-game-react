@@ -5,9 +5,14 @@ export const Card = ({ openCard, id }) => {
   const refCard = useRef(null);
 
   return (
-    <li className="card notOpen" ref={refCard} onClick={() => openCard(refCard.current)} id={String(id)}></li>
-  )
-}
+    <li
+      className="card"
+      ref={refCard}
+      onClick={() => openCard(refCard.current)}
+      id={String(id)}
+    ></li>
+  );
+};
 
 Card.propTypes = {
   openCard: PropTypes.func.isRequired,

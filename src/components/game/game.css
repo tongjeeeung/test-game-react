@@ -1,3 +1,7 @@
+:root {
+  --shadow: white;
+}
+
 body {
   background-color: rgb(62, 55, 55);
 }
@@ -6,15 +10,16 @@ body {
   display: flex;
   background-color: black;
   border: 4px solid black;
+  animation: shadowCircle 5s ease-in-out infinite;
 }
 
 .list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 10px;
-  width: 400px;
-  height: 300px;
+  width: 44rem;
+  height: 32rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -25,12 +30,45 @@ body {
 .card {
   background-color: darkgray;
   border-radius: 15%;
-}
-
-.notOpen {
-  background-color: gray;
+  transition: background-color 0.3s;
 }
 
 .end {
   color: rgb(255, 255, 255);
+}
+
+@keyframes shadowCircle {
+  0% {
+    box-shadow: -3px 0 5px var(--shadow);
+  }
+  10% {
+    box-shadow: -2px -2px 5px var(--shadow);
+  }
+  20% {
+    box-shadow: -1px -3px 5px var(--shadow);
+  }
+  30% {
+    box-shadow: 0 -3px 5px var(--shadow);
+  }
+  40% {
+    box-shadow: 1px -3px 5px var(--shadow);
+  }
+  50% {
+    box-shadow: 2px -2px 5px var(--shadow);
+  }
+  60% {
+    box-shadow: 3px 0 5px var(--shadow);
+  }
+  70% {
+    box-shadow: 2px 2px 5px var(--shadow);
+  }
+  80% {
+    box-shadow: 1px 3px 5px var(--shadow);
+  }
+  90% {
+    box-shadow: 0 3px 5px var(--shadow);
+  }
+  100% {
+    box-shadow: -3px 0 5px var(--shadow);
+  }
 }
